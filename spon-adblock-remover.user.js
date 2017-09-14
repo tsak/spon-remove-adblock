@@ -1,7 +1,11 @@
 // ==UserScript==
 // @name         Remove Spiegel Online Adblock Popup Asynchronously
 // @namespace    http://tampermonkey.net/
+// @homepageURL  https://github.com/tsak/spon-remove-adblock
+// @updateURL    https://github.com/tsak/spon-remove-adblock/raw/master/spon-adblock-remover.user.js
+// @supportURL   https://github.com/tsak/spon-remove-adblock/issues
 // @version      0.1
+// @license      MIT
 // @description  remove annoying Adblock nag screen from Spiegel.de
 // @author       tsak
 // @match        *://*.spiegel.de/*
