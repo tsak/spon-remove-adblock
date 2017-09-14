@@ -5,6 +5,6 @@ Inspired by [azettl/js-spiegel-remove-adblock-popup](https://github.com/azettl/j
 
 ## Install
 
-Click the following link to the (raw) Javscript file and it should trigger Tamper Monkey's install routine:
+Click the following link to the (raw) Javescript file and it should trigger Tamper Monkey's install routine:
 
 [spon-adblock-remover.user.js](https://github.com/tsak/spon-remove-adblock/raw/master/spon-adblock-remover.user.js)
