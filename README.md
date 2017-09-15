@@ -3,6 +3,10 @@ Tampermonkey script to asynchronously remove Spiegel Online's adblock nag screen
 
 Inspired by [azettl/js-spiegel-remove-adblock-popup](https://github.com/azettl/js-spiegel-remove-adblock-popup)
 
+## Prerequisites
+
+Tampermonkey browser extension: [tampermonkey.net](http://tampermonkey.net)
+
 ## Install
 
 Click the following link to the (raw) Javescript file and it should trigger Tamper Monkey's install routine:
