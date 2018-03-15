@@ -4,7 +4,7 @@
 // @homepageURL  https://github.com/tsak/spon-remove-adblock
 // @updateURL    https://github.com/tsak/spon-remove-adblock/raw/master/spon-adblock-remover.user.js
 // @supportURL   https://github.com/tsak/spon-remove-adblock/issues
-// @version      0.1
+// @version      0.2
 // @license      MIT
 // @description  remove annoying Adblock nag screen from Spiegel.de
 // @author       tsak
@@ -24,7 +24,7 @@
     );
 
     GM_addStyle(
-        "body > .ua-detected {\n"+
+        "body > div[id^=sp_message], body > div[class^=sp_veil] {\n"+
         "animation-duration: 0.001s;\n"+
         "animation-name: nodeInserted;\n"+
         "}"
@@ -33,10 +33,16 @@
     var insertListener = function(event){
         if (event.animationName == "nodeInserted") {
             // Remove nag screen
-            var el = document.querySelectorAll('.ua-detected')[0];
+            var el = document.querySelectorAll('div[id^=sp_message_id]')[0];
             el.parentNode.removeChild(el);
+            
+            // Remove overlay
+            var el2 = document.querySelectorAll('div[class^=sp_veil]')[0];
+            el2.parentNode.removeChild(el2);
+            
             // Disable blur on content wrapper
-            document.getElementById('wrapper-content').setAttribute('style', '');
+            document.getElementsByTagName('html')[0].setAttribute('style', '');
+            document.getElementsByTagName('body')[0].setAttribute('style', '');
         }
     };
 
